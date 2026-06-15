@@ -1,39 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://cosmos0111-cmyk.github.io/bp-kr-pbn-bp-033/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <loc>https:///</loc>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://cosmos0111-cmyk.github.io/bp-kr-pbn-bp-033/posts/compare-002-nysyys.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <loc>https:///about.html</loc>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cosmos0111-cmyk.github.io/bp-kr-pbn-bp-033/posts/qa-001-nysyys.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <loc>https:///blog.html</loc>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://cosmos0111-cmyk.github.io/bp-kr-pbn-bp-033/posts/review-002-iqfc0h.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://cosmos0111-cmyk.github.io/bp-kr-pbn-bp-033/posts/t3link-001-iqfc0h.html</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://cosmos0111-cmyk.github.io/bp-kr-pbn-bp-033/feed.xml</loc>
-    <lastmod>2026-06-10</lastmod>
+    <loc>https:///feed.xml</loc>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
   </url>
 </urlset>

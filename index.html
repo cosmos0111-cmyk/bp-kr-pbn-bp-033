@@ -1,213 +1,295 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>영화 미학 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --cream-bg: #fdfdfa;
-      --charcoal-fg: #1c1a17;
-      --gold-accent: #c29d6d;
-      --hairline-color: #e6e3db;
-      --serif-font: 'Nanum Myeongjo', serif;
-      --sans-font: 'Outfit', sans-serif;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--cream-bg);
-      color: var(--charcoal-fg);
-      font-family: var(--sans-font);
-      line-height: 1.8;
-      padding: 0 40px;
-    }
-    .wrapper {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 80px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--hairline-color);
-      padding-bottom: 32px;
-      margin-bottom: 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-    .brand {
-      font-family: var(--serif-font);
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--charcoal-fg);
-      text-decoration: none;
-      letter-spacing: 0.05em;
-    }
-    nav { display: flex; gap: 32px; }
-    nav a {
-      color: var(--charcoal-fg);
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      transition: color 0.3s ease;
-    }
-    nav a:hover { color: var(--gold-accent); }
-    main { padding-bottom: 80px; }
-    .kicker {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--gold-accent);
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-family: var(--serif-font);
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1.35;
-      letter-spacing: -0.02em;
-      color: var(--charcoal-fg);
-      margin-bottom: 40px;
-    }
-    .story-body {
-      font-family: var(--serif-font);
-      font-size: 1.15rem;
-      color: var(--charcoal-fg);
-      font-weight: 400;
-      text-align: justify;
-      margin-bottom: 60px;
-    }
-    .story-body p { margin-bottom: 24px; text-indent: 12px; }
-    .juice-link {
-      color: var(--gold-accent);
-      text-decoration: none;
-      border-bottom: 1px solid var(--gold-accent);
-      font-weight: 700;
-      transition: all 0.3s ease;
-    }
-    .juice-link:hover {
-      color: var(--charcoal-fg);
-      border-bottom-color: var(--charcoal-fg);
-    }
-    .editorials {
-      border-top: 1px solid var(--hairline-color);
-      padding-top: 60px;
-    }
-    .editorial-label {
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--gold-accent);
-      margin-bottom: 40px;
-    }
-    .editorial-flow {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-    .editorial-block {
-      text-decoration: none;
-      color: var(--charcoal-fg);
-      display: block;
-      border-bottom: 1px solid var(--hairline-color);
-      padding-bottom: 30px;
-    }
-    .editorial-block:hover h3 { color: var(--gold-accent); }
-    .editorial-block h3 {
-      font-family: var(--serif-font);
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-      transition: color 0.3s ease;
-    }
-    .editorial-block p {
-      font-size: 0.95rem;
-      color: #555555;
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--hairline-color);
-      padding-top: 40px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      color: #888888;
-    }
-    footer a { color: #888888; text-decoration: none; }
-    footer a:hover { color: var(--gold-accent); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 16px; }
-      h1 { font-size: 2rem; }
-      .story-body { font-size: 1.05rem; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Design System & Theme Tags -->
+<meta name="bpaas-design-system" content="brutalist-avantgarde">
+<meta name="bpaas-design-theme" content="kr-neon-void">
+
+<title>광주 홈페이지 제작 추천 | 홈</title>
+<meta name="description" content="광주에서 가장 신뢰할 수 있는 홈페이지 제작 파트너. 복잡한 과정 없이 직관적인 디자인과 빠른 납기를 목표로 한, 광주 지역 온라인 마케팅 솔루션 전문 업체입니다.">
+<meta name="keywords" content="광주 홈페이지 제작, 광주 웹사이트 제작, 광주 웹디자인, 광주 이커머스, 광주 쇼핑몰 제작, 광주 랜딩페이지">
+<link rel="canonical" href="https://example.com/gwangju-website-dev-recommendation">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="광주 홈페이지 제작 추천 | 홈">
+<meta property="og:description" content="복잡한 개발 과정 없이, 실전 중심의 웹 디자인을 원하신다면 여기가 맞습니다. 광주 지역 비즈니스를 위한 최적의 솔루션입니다.">
+<meta property="og:image" content="og-image.svg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="광주 홈페이지 제작 추천 | 홈">
+<meta property="twitter:description" content="복잡한 개발 과정 없이, 실전 중심의 웹 디자인을 원하신다면 여기가 맞습니다.">
+
+<!-- Meta Telephone -->
+<meta name="telephone" content="010-6279-0862">
+
+<style>
+/* --- CSS DNA: Street Brutalist & Neon Void --- */
+/* Variables for easy theming if needed later, mostly hardcoded for raw feel */
+:root {
+  --color-primary: #000000;
+  --color-secondary: #ffffff;
+  --color-accent: #ff3b00;
+  --border-width: 4px;
+  --font-main: 'Impact', sans-serif;
+  --font-mono: 'Courier New', monospace; /* For raw data look */
+}
+
+/* Reset & Base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  font-family: var(--font-main);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, p, li, span { margin: 0 0 24px 0; }
+a { text-decoration: none; color: inherit; cursor: pointer; position: relative; z-index: 10; }
+ul { list-style: none; }
+
+/* Utility Classes for Brutalist Layout */
+.brutal-box { border: var(--border-width) solid var(--color-primary); background: #fff; }
+.brutal-text-accent { color: var(--color-accent); font-weight: 900; text-transform: uppercase; letter-spacing: -1px; }
+.brutal-rotate-left { transform: rotate(-2deg); }
+.brutal-rotate-right { transform: rotate(1deg); }
+
+/* Layout System */
+.container-fluid { width: 100%; max-width: none; margin: 0 auto; padding: 0 48px; }
+.section-padding { padding-top: 96px; padding-bottom: 96px; border-top: var(--border-width) solid var(--color-primary); background-color: #f5f5f5; }
+.section-padding--large { padding-top: 120px; padding-bottom: 120px; background-color: #fff; }
+
+/* Header & Nav */
+header { 
+  position: sticky; top: 0; z-index: 998; 
+  border-bottom: var(--border-width) solid var(--color-primary);
+  background: rgba(255,255,255,0.95); backdrop-filter: blur(4px);
+}
+.header-inner { display: flex; justify-content: space-between; align-items: center; height: 80px; padding: 0 16px; }
+.logo { font-size: 2rem; line-height: 1.1; text-transform: uppercase; letter-spacing: -0.5px; }
+.nav-menu ul { display: flex; gap: 32px; margin-top: 18px; padding: 16px; border-bottom: var(--border-width) solid #ccc; background: var(--color-primary); color: #fff; width: fit-content; }
+.nav-menu li a { font-family: var(--font-mono); font-size: 0.9rem; text-transform: uppercase; display: block; padding: 8px 12px; border: 2px solid transparent; transition: all 0.2s; }
+.nav-menu li a:hover, .nav-menu li a.active { background: var(--color-accent); color: #fff; border-color: #fff; text-decoration: none; clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%); }
+.nav-menu ul { display: flex; gap: 24px; margin-top: 0; padding: 16px; background: var(--color-primary); width: auto; }
+
+/* Mobile Hamburger */
+.hamburger-btn { font-family: 'Courier New', monospace; cursor: pointer; border: 2px solid #fff; padding: 8px 16px; font-weight: bold; display: none; z-index: 999; background: #000; }
+
+/* HERO SECTION - The Core */
+#hero { 
+  position: relative; 
+  min-height: 90vh; 
+  padding-top: 48px; 
+  border-bottom: var(--border-width) solid #fff;
+  overflow: hidden;
+}
+.hero-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 32px; align-items: center; }
+
+h1.main-title { 
+  font-size: clamp(4rem, 15vw, 9rem); 
+  line-height: 0.85; 
+  text-transform: uppercase; 
+  word-break: break-all;
+}
+.hero-desc { grid-column: span 6; max-width: 60ch; }
+.hero-visual-box { 
+  grid-column: span 6; 
+  border: var(--border-width) solid #000; 
+  padding: 24px;
+  background: var(--color-accent);
+  transform: rotate(-1deg);
+}
+.hero-phone-large { font-size: clamp(2rem, 5vw, 3.5rem); font-family: 'Courier New', monospace; display: block; margin-top: 8px; color: #fff; }
+
+/* CONTENT BLOCKS */
+.content-block { border: var(--border-width) solid var(--color-primary); padding: 48px; background: #fff; position: relative; z-index: 1; }
+.block-header { font-size: 2.5rem; margin-bottom: 32px; border-bottom: 4px solid #ccc; display: inline-block; padding-right: 32px; line-height: 1.1; }
+
+/* List Styles */
+.list-check li { 
+  position: relative; 
+  padding-left: 60px; 
+  margin-bottom: 24px; 
+  font-size: 1.1rem;
+}
+.list-check li::before {
+  content: '';
+  position: absolute; left: 0; top: 8px;
+  width: 36px; height: 36px;
+  border: var(--border-width) solid #000;
+  background: var(--color-secondary);
+}
+
+/* Specific Raw Elements */
+.raw-data-tag { 
+  display: inline-block; 
+  font-family: 'Courier New', monospace; 
+  background: #fff; 
+  border: 2px solid #000; 
+  padding: 4px 12px; 
+  margin-right: 8px; 
+}
+.raw-data-tag::after { content: ':'; }
+
+/* Fixed Bottom Bar - CTA */
+.fixed-cta-bar {
+  position: fixed; bottom: 0; width: 100%;
+  background: var(--color-accent); /* Accent Color Background */
+  color: #fff; z-index: 9999;
+  border-top: 4px solid #000;
+  padding: 24px; display: flex; align-items: center; justify-content: center; gap: 16px;
+  box-shadow: 0 -8px 0 rgba(0,0,0,0.5);
+}
+.fixed-cta-bar a {
+  background: #fff;
+  color: var(--color-primary);
+  padding: 12px 24px;
+  border: 2px solid var(--color-primary);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.2s;
+}
+.fixed-cta-bar a:hover {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .container-fluid { padding: 0 24px; }
+  .header-inner { height: 70px; }
+  .logo { font-size: 1.8rem; }
+  .nav-menu ul { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; width: 100%; background: var(--color-primary); padding: 16px; border-bottom: none; }
+  .nav-menu.active ul { display: flex; }
+  .hamburger-btn { display: block; background: var(--color-primary); color: #fff; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-desc, .hero-visual-box { grid-column: span 12; }
+  .hero-visual-box { transform: none; }
+  h1.main-title { font-size: clamp(3rem, 12vw, 6rem); }
+  .content-block { padding: 32px; }
+  .block-header { font-size: 2rem; }
+  .list-check li { padding-left: 48px; font-size: 1rem; }
+  .list-check li::before { width: 30px; height: 30px; top: 4px; }
+  .fixed-cta-bar { flex-direction: column; padding: 16px; gap: 8px; }
+}
+
+@media (max-width: 480px) {
+  .container-fluid { padding: 0 16px; }
+  .section-padding { padding-top: 60px; padding-bottom: 60px; }
+  .section-padding--large { padding-top: 80px; padding-bottom: 80px; }
+  .logo { font-size: 1.5rem; }
+  .fixed-cta-bar a { padding: 10px 20px; font-size: 0.9rem; }
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <a href="/" class="brand">EDITORIAL.KR</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="kicker">BOUTIQUE KR / SELECTION ACCENT</div>
-      <h1>영화 미학 지식 저널 및 아카이브</h1>
-      <div class="story-body">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>영화 미학</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="editorials">
-        <div class="editorial-label">Recent Editorial Articles</div>
-        <div class="editorial-flow">
-          
-        <a href="posts/normal-1.html" class="editorial-block">
-          <h3>안드레이 타르코프스키의 장시간 촬영(Long Take)과 조형적 침묵의 미학</h3>
-          <p>세계적인 영화 거장 안드레이 타르코프스키 감독이 고집했던 롱테이크 샷 기법은 단순히 기술적인 길이를 넘어 관객의 물리적 시간 감각을 정지시키고 인위적인 미장센 속 조형적 침묵을 체...</p>
-        </a>
-      
-
-        <a href="posts/normal-2.html" class="editorial-block">
-          <h3>고전 공포영화 음향 효과 속 숨겨진 악기: 워터폰(Waterphone)의 금속성 불협화음</h3>
-          <p>스크린 위에 깃드는 기괴하고 날카로운 서스펜스를 조율할 때 필수로 채용되는 특수 타악기인 워터폰은 청동 실린더 내부에 차 있는 물의 양에 따라 공진 주파수가 극적으로 변하여 사람의...</p>
-        </a>
-      
-
-        <a href="posts/normal-3.html" class="editorial-block">
-          <h3>스탠리 큐브릭 감독의 대칭 구도: 1점 투시 도식(One-Point Perspective)이 주는 심리적 압박</h3>
-          <p>완벽주의적인 시네아스트 스탠리 큐브릭이 애용했던 화면 정중앙의 1점 투시 수렴 대칭 구도는 관객의 시선을 강제로 가두어 인공적인 폐쇄 공포와 거역할 수 없는 심리적 억압 효과를 자...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="editorial-block">
-          <h3>시네필과 영화 예술 매니아들이 엄선 정리한 구글 상위노출 대행 상세 정보 리포트</h3>
-          <p>빛과 어둠의 정교한 시각 프레임과 기하학적 미장센의 깊은 울림을 공부하며 시각 예술의 안목을 키워가는 현대의 시네필분들이라면, 극장 밖 현실 세계에서 느끼는 여가의 만족도와 품격 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="editorial-block">
-          <h3>시네필과 영화 예술 매니아들이 엄선 정리한 구글 상위노출 대행 상세 정보 리포트</h3>
-          <p>빛과 어둠의 정교한 시각 프레임과 기하학적 미장센의 깊은 울림을 공부하며 시각 예술의 안목을 키워가는 현대의 시네필분들이라면, 극장 밖 현실 세계에서 느끼는 여가의 만족도와 품격 ...</p>
-        </a>
-      
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 EDITORIAL.KR. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
-    </footer>
+<header>
+  <div class="container-fluid header-inner">
+    <div class="logo"><a href="#">광주 웹</a></div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#">서비스</a></li>
+        <li><a href="#">포트폴리오</a></li>
+        <li><a href="#">문의</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger-btn">MENU</button>
   </div>
+</header>
+
+<main>
+  <section id="hero" class="container-fluid">
+    <div class="hero-grid">
+      <h1 class="main-title brutal-text-accent">광주<br>홈페이지<br>제작</h1>
+      <div class="hero-desc">
+        <p>복잡한 개발 과정은 이제 그만. 우리는 광주 지역 비즈니스를 위한 가장 직관적이고, 가장 효과적인 온라인 솔루션을 제공합니다. 댱신의 아이디어를 현실로, 빠르게.</p>
+        <p>지금 바로 <a href="tel:010-6279-0862" class="brutal-text-accent hero-phone-large">010-6279-0862</a> 로 문의하세요.</p>
+      </div>
+      <div class="hero-visual-box">
+        <img src="https://via.placeholder.com/600x400/FF3B00/FFFFFF?text=Gwangju+Web+Dev" alt="광주 홈페이지 제작 비주얼" style="width:100%; height:auto; display:block; border:2px solid #fff;">
+      </div>
+    </div>
+  </section>
+
+<!-- SEO Visual 2: 홈페이지 제작 Brutalist Typography Cards -->
+<div class="seo-visual-cards" role="img" aria-label="광주 홈페이지 제작 추천 홈페이지 제작 — 신뢰할 수 있는 서비스" 
+     style="display:flex;flex-direction:column;gap:80px;margin:120px auto;max-width:1100px;padding:0 24px">
+  <div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#ffffff;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">01</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#ffffff;letter-spacing:-0.02em;margin-bottom:8px">특화</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#888888;text-transform:uppercase">광주 홈페이지 제작 추천</div>
+  </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#ffffff;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">02</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#ffffff;letter-spacing:-0.02em;margin-bottom:8px">다수 실적</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#888888;text-transform:uppercase">광주 홈페이지 제작 추천</div>
+  </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#ffffff;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">03</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#ffffff;letter-spacing:-0.02em;margin-bottom:8px">고품질</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#888888;text-transform:uppercase">광주 홈페이지 제작 추천</div>
+  </div>
+</div>
+
+  <section class="section-padding--large">
+    <div class="container-fluid">
+      <div class="content-block brutal-rotate-left">
+        <h2 class="block-header brutal-text-accent">변화의 시작, 광주의 디지털 심장</h2>
+        <p>어스름이 내린 광주의 밤거리, 네온사인이 저마다의 색으로 빛나듯, 모든 비즈ᅳ니스 또한 고유한 빛을 발해야 합니다. 하지만 때때로 그 빛은 복잡한 디지털 세상의 미로 속에서 길을 잃곤 합내다. 우리는 바로 그 길을 밝히는 등대가 되고자 합니다. 광주라는 도시가 가진 역동적인 에너지, 그리고 그 속에서 피어나는 수많은 꿈과 열정을 온라인이라는 거대한 캔버스 위에 가장 선명하게 그려내는 것이 우리의 사명입니다.</p>
+        <p>우리의 여정은 단순한 웹사이트 구축을 넘어섭니다. 그것은 고객의 비전과 광주 지역의 특성을 깊이 이해하는 것에서 출발합니다. 마치 오랜 친구와 대화를 나누듯, 당신의 이야기를 경청하고, 당신의 브랜드가 지닌 본질적인 가치를 찾아냅니다. 그리고 그 가치를 디지털 세상에서 가장 매력적이고, 가장 효율적인 형태로 구현하기 위해 밤낮으로 고민팝니다. 단순히 예쁜 디자인을 넘어, 방문자의 마음을 사로잡고 행동을 유발하는, 살아 숨 쉬는 웹사이트를 만드는 것이 우리의 목표입니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container-fluid">
+      <div class="content-block brutal-rotate-right">
+        <h2 class="block-header brutal-text-accent">단순함을 넘어선 본질, 그리고 속도</h2>
+        <p>시대를 초월하는 디자인은 복잡함 속에 있지 않습니다. 본질을 꿰뚫는 단순함, 그것이 바로 우리의 철학입니다. 과도한 애니메이션이나 불필요한 기능은 웹사이트를 무겁게 만들고, 결국 방문자의 이탈로 이어집니다. 우리는 이러한 함정을 피하고, 오직 사용자 경험에 집중합니다. 필요한 정보는 명확ᆨ파게 전달되고, 원하는 기능은 직관적으로 작동하며, 모든 페이지는 번개처럼 빠르게 로딩되어야 합니다. 이것이 바로 '브루탈리스트 아방가르드'라는 우리의 디자인 시스템이 추구하는 가치입니다.</p>
+        <p>또한, 시간은 비즈니스에 있어 가장 귀중한 자원임을 잘 알고 있습니다. 아이디어가 떠올랐을 때, 그 영감이 식기 전에 현실로 구현되어야 합니다. 그래서 우리는 '빠른 납기'를 단순한 약속이 아닌, 우리의 핵심 경쟁력으로 삼고 있습니다. 불필요한 절차를 과감히 제거하고, 효율적인 워크플로우를 통해 광주 지역의 사업가들이 시장에 더 빨리 진입하고, 더 빨리 성과를 낼 수 있도록 돕습니다. 당신의 시간은 소중하며, 우리는 그 시간을 존중합니다. 첫 미팅부터 최종 론칭까지, 모든 과정에서 투명하고 신속한 소토ᅩᆼ을 약속드립니다.</p>
+        <ul class="list-check">
+          <li><span class="raw-data-tag">EFFICIENCY</span>: 군더더기 없는 최적화된 웹사이트 구조</li>
+          <li><span class="raw-data-tag">SPEED</span>: 아이디어를 현실로 만드는 빠른 실행력</li>
+          <li><span class="raw-data-tag">IMPACT</span>: 방문자의 기억에 각인되는 강력한 브랜드 경험</li>
+          <li><span class="raw-data-tag">LOCAL-FOCUS</span>: 광주 지역 비즈니스 환경에 대한 깊은 이해</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding--large">
+    <div class="container-fluid">
+      <div class="content-block brutal-rotate-left">
+        <h2 class="block-header brutal-text-accent">광주와 함께 성장하는 디지털 동반자</h2>
+        <p>우리는 단순히 서비스를 제공하는 업체가 아닙니다. 뽱주의 경제 생태계 속에서 함께 숨 쉬고, 함께 성장하고자 하는 진정한 동반자입니다. 지역 상권의 트렌드를 읽고, 지역 소비자들의 심리를 분석하며, 광주만의 독특한 문화적 정서를 웹사이트에 녹여냅니다. 당신의 비즈니스가 광주에ᄉ서 성공하는 것은 곧 우리의 성공이자, 광주 전체의 디지털 역량을 강화하는 일이라고 믿습니다.</p>
+        <p>온라인 세상은ᆫ 끊임없이 벼ᄖ화합니다. 새로운 기술이 등장하고, 사용자들의 기대치ᄛᅩ 높아집니다. 우리는 이러한 변화의 흐름을 주시하며, 항상 최신 트렌드를 학습하고 적용합니ᅵ다. 단순한 반응형 웹 디자인을 넘어, 검색 엔진 최적화(SEO)를 통해 더 많은 잠재 고객에게 도달하고, 소셜 미디어와의 연동을 통해 브랜드 인지도를 높이는 등, 다각적인 디지털 마케팅 전략을 웹사이트에 통합합니ᅵ다. 당신의 온라인 존재감은 이제 단순한 웹페이지가 아닌, 강력한 ᄇ비즈니스 성장 엔진이 될 것입니다. 망ᄉ설이지 마세요. 지금이 바로 당신의 비즈니스가 ᄖᅵ지털 광주에서 빛을 발할 때입니다.</p>
+      </div>
+    </div>
+  
+<div class="seo-visual-divider" role="separator" aria-label="광주 홈페이지 제작 추천 구분선" style="margin:80px 0;height:1px;background:#888888;opacity:0.1"></div>
+</section>
+</main>
+
+<div class="fixed-cta-bar">
+  <span>지금 바로 당신의 온라인 비전을 실현하세요.</span>
+  <a href="tel:010-6279-0862">전화 문의: 010-6279-0862</a>
+</div>
+
+
+    <div class="juice-ref-ppqz40" style="margin-top:2.5rem;padding:1rem 0;border-top:1px dashed #ccc;font-size:0.9rem;color:#666;">
+      <p style="font-weight:600;margin-bottom:0.5rem;">함께 보면 좋은 정보</p>
+      <ul style="list-style:none;padding:0;margin:0;">
+      <li>이 주제에 대한 더 전문적인 분석은 <a href="https://hikari-fiber.store/">tokyo-fiber</a>에서 확인하실 수 있습니다.</li>
+      <li>자세한 기술 명세 가이드는 <a href="https://ko.wikipedia.org/" rel="noopener noreferrer" target="_blank">공식 가이드 커뮤니티</a>를 참고하십시오.</li>
+      </ul>
+    </div>
 </body>
 </html>

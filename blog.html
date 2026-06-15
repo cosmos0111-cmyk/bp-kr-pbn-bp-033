@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Design System & Theme Tags -->
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <title>광주, 오피스텔을 빌려가며 만든 첫 번째 홈페이지 - 블로그</title>
+    <meta name="description" content="개발자도 힘들어하는 '홈페이지 제작' 과정. 광주에서 실무적인 관점에서 어떤 점을 봐야 하는지 직설적으로 파헤치는 정보성 글입니다.">
+    <meta name="keywords" content="광주 홈페이지 제작 추천, 광주 웹디자인 후기, 오피스텔 빌딩의 홈페이지, 실무형 디자인">
+    <link rel="canonical" href="https://example.com/blog/gwangju-office-website-story">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="광주, 오피스텔을 빌려가며 만든 첫 번째 홈페이지">
+    <meta property="og:description" content="개발자도 힘들어하는 '홈페이지 제작' 과정. 광주에서 실무적인 관점에서 어떤 점을 봐야 하는지 직설적으로 파헤치는 정보성 글입니다.">
+
+    <!-- Inline CSS for Brutalist Theme -->
+    <style>
+        :root {
+            --bg-color: #0f1215;
+            --text-color: #e0e6ed;
+            --primary-neon: #00f3ff;
+            --secondary-neon: #ff0099;
+            --accent-gray: #2a3038;
+            --border-thickness: 3px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Layout Grid */
+        .grid-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            gap: 32px;
+        }
+
+        /* Typography Utilities */
+        h1, h2, h3 {
+            font-weight: 800;
+            line-height: 1.2;
+            color: #fff;
+        }
+
+        .text-neon {
+            color: var(--primary-neon);
+        }
+
+        /* Header & Nav */
+        header {
+            border-bottom: var(--border-thickness) solid var(--accent-gray);
+            padding: 24px 0;
+            margin-bottom: 64px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-brand {
+            font-size: 1.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            border: var(--border-thickness) solid var(--secondary-neon);
+            padding: 8px 16px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 700;
+            position: relative;
+        }
+
+        nav a:hover::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: var(--border-thickness);
+            background-color: var(--primary-neon);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            border: var(--border-thickness) solid #fff;
+            padding: 48px;
+            margin-bottom: 64px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100px;
+            height: 100px;
+            background-color: var(--primary-neon);
+            z-index: 0;
+        }
+
+        .hero-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Main Content */
+        article.content-block {
+            border-left: var(--border-thickness) solid var(--secondary-neon);
+            padding-left: 32px;
+            margin-bottom: 48px;
+            position: relative;
+        }
+
+        .content-meta {
+            font-size: 0.9rem;
+            color: #8f96a1;
+            margin-bottom: 24px;
+            display: flex;
+            gap: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .content-meta span::after {
+            content: '|';
+            opacity: 0.5;
+        }
+        
+        .content-meta span:last-child::after {
+            display: none;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+        }
+
+        /* CTA Block */
+        .cta-box {
+            background-color: var(--accent-gray);
+            border: 2px dashed var(--text-color);
+            padding: 32px;
+            text-align: center;
+            margin-top: 64px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: transparent;
+            color: var(--primary-neon);
+            border: 2px solid var(--primary-neon);
+            padding: 16px 32px;
+            font-weight: 800;
+            text-decoration: none;
+            margin-top: 24px;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-neon);
+            color: #000;
+        }
+
+        /* Footer */
+        footer {
+            border-top: var(--border-thickness) solid var(--accent-gray);
+            padding: 48px 0;
+            margin-top: 96px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        @media (max-width: 768px) {
+            .grid-container { padding: 0 16px; gap: 24px;}
+            .hero-section { padding: 32px 16px; }
+            nav ul { display: none; } /* Simplified mobile view */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="grid-container">
+        <nav>
+            <div class="logo-brand">NEON VOID STUDIO</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="grid-container">
+        
+        <!-- Hero Section -->
+        <section class="hero-section">
+
+<!-- SEO Visual 1: 광주 홈페이지 제작 추천 Brutalist Avant-Garde Hero -->
+<div class="seo-visual-hero" role="img" aria-label="신뢰할 수 있는 서비스 — 광주 광주 홈페이지 제작 추천" 
+     style="width:100%;padding:120px 0 60px 0;background:#ffffff;text-align:left;margin:0;position:relative">
+  <div style="max-width:1100px;margin:0 auto;padding:0 24px">
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.4em;color:#000000;margin-bottom:24px;text-transform:uppercase">/ PERSPECTIVE DECONSTRUCTED</div>
+    <div style="font-size:7.5vw;line-height:0.95;font-weight:900;font-family:serif;color:#000000;letter-spacing:-0.05em;margin:0 0 32px 0;text-transform:uppercase">광주 홈페이지 제작 추천</div>
+    <p style="font-size:1.1rem;line-height:1.7;color:#000000;max-width:550px;font-weight:300;margin:0">신뢰할 수 있는 서비스</p>
+  </div>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","name":"광주 홈페이지 제작 추천","description":"신뢰할 수 있는 서비스","contentUrl":"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22/>"}</script>
+</div>
+            <h1 class="hero-title">광주, 오피스텔을 빌려가며<br><span style="color: var(--primary-neon);">만든 첫 번째 홈페이지</span></h1>
+            <p style="font-size: 1.25rem; max-width: 70ch;">
+                개발자도 힘들어하는 '홈페이지 제작' 과정. 광주에서 실무적인 관점에서 어떤 점을 봐야 하는지, 오피스텔 빌딩의 뒷담화처럼 직설적으로 파헤치는 정보성 글입니다.
+            </p>
+        
+<div class="seo-visual-divider" role="separator" aria-label="광주 홈페이지 제작 추천 구분선" style="margin:80px 0;height:1px;background:#666666;opacity:0.1"></div>
+</section>
+
+<!-- SEO Visual 2: 홈페이지 제작 Brutalist Typography Cards -->
+<div class="seo-visual-cards" role="img" aria-label="광주 홈페이지 제작 추천 홈페이지 제작 — 신뢰할 수 있는 서비스" 
+     style="display:flex;flex-direction:column;gap:80px;margin:120px auto;max-width:1100px;padding:0 24px">
+  <div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">01</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">특화</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">광주 홈페이지 제작 추천</div>
+  </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">02</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">다수 실적</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">광주 홈페이지 제작 추천</div>
+  </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">03</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">고품질</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">광주 홈페이지 제작 추천</div>
+  </div>
+</div>
+
+        <!-- Article Body -->
+        <article class="content-block">
+            <div class="content-meta">
+                <span>Category: Developer Diary</span>
+                <span>Date: 2023.10.27</span>
+                <span>Tone: Brutalist Realist</span>
+            </div>
+
+            <p style="margin-bottom: 48px;">
+                흔히들 "홈페이지 만들어주는 곳"이라고 하면 화려한 포트폴리오나 기술 스택을 먼저 들먹이죠. 하지만 제가 광주에서 첫 프로젝트를 진행할 때, 가장 중요하게 생각했던 건 '오피스텔 빌딩에 있는 그 작은 사무실'과 비슷해야 한다는 점입니다.
+            </p>
+
+            <h2 class="text-neon" style="margin-bottom: 32px;">1. 직관적인 디자인이 돈이다</h2>
+            
+            <p>
+                클라이언트 분이 "저희 회사, 화려한 거 원해요."라고 말씀하시죠. 그다음에 나오는 게 뭐야? 바로 예산과 유지보수 비용입니다. 광주 지역 업체에서 많이 듣는 말 중 하나가 "너무 복잡한 건 나중에 고치기 싫으니까"라는 거예요.
+            </p>
+            
+            <p>
+                그래서 저는 첫 화면 (Landing Page) 에서 사용자가 보고 싶은 정보를 3 초 안에 줘야겠다고 생각했습니다. 복잡한 애니메이션보다는 깔끔한 타이포그래피와 명확한 버튼이 더 중요합니다. 마치 오피스텔 로비를 지나갈 때, '101 번실'이라고 적힌 표지판처럼 말이죠.
+            </p>
+
+            <h2 style="margin-top: 48px;">2. 지역 업체, 왜 선택해야 할까요?</body>
+</html>
